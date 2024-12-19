@@ -1,0 +1,209 @@
+/* General Layout */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.container {
+    display: flex;
+    min-height: 100vh;
+
+}
+
+/* Left Sidebar */
+.sidebar {
+    width: 300px;
+    background-color: #434a54; 
+    color: #fff;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+}
+
+.sidebar .profile-pic img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%; 
+    object-fit: cover; 
+    margin-bottom: 15px;
+    border: 3px solid #555; 
+}
+
+.sidebar .section {
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.sidebar .section h2 {
+    font-size: 18px;
+    border-bottom: 2px solid #555; 
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+.sidebar .section p,
+.sidebar .section a {
+    font-size: 14px;
+    line-height: 1.5;
+    margin-bottom: 5px;
+    color: #ddd; 
+    text-align: left;
+}
+
+.sidebar .section a {
+    text-decoration: none; 
+    color: #00bcd4; 
+}
+
+.sidebar .section a:hover {
+    color: #1e90ff; 
+}
+
+
+/* Main Content */
+.content {
+    flex-grow: 1; 
+    background-color: #fff;
+    padding: 20px;
+    box-sizing: border-box;
+    margin-left: -10px;
+}
+
+.content header h1 {
+    font-family: 'Roboto', sans-serif; 
+    font-size: 30px; 
+    font-weight: 600; 
+    line-height: 1.2; 
+    margin-bottom: 15px; 
+    color: #333; 
+}
+
+.content header p {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 10px;
+}
+
+.content h2 {
+    font-size: 20px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 5px;
+}
+
+.content ul {
+    list-style-type: disc;
+    margin-left: 20px;
+    padding-left: 20px;
+}
+
+.content ul li {
+    margin-bottom: 15px;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+/* General Skills Section */
+.skills {
+    margin-top: 20px;
+}
+
+.skills h2 {
+    margin-bottom: 20px;
+    font-size: 20px;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 5px;
+}
+
+/* Skills List */
+.skill {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    gap: 10px; 
+}
+
+.skill p {
+    flex: 1; 
+    font-size: 14px;
+    margin: 0;
+    font-weight: bold;
+}
+
+/* Skill Bar */
+.skill-bar {
+    width: 2cm; 
+    height: 8px; 
+    background-color: #ddd; 
+    border-radius: 4px; 
+    overflow: hidden;
+    position: relative;
+}
+
+.skill-fill {
+    height: 100%; 
+    background-color: #434a54; 
+    transition: width 0.5s ease-in-out; 
+}
+
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column; 
+    }
+
+    .sidebar {
+        width: 100%; 
+        align-items: flex-start;
+        padding: 15px;
+    }
+
+    .content {
+        padding: 15px;
+    }
+}
+
+/* Print Styles */
+@media print {
+    body {
+        background-color: #fff; 
+        color: #000; 
+    }
+
+    .container {
+        display: flex;
+        flex-direction: row; 
+    }
+
+    .sidebar {
+        background-color: #434a54 !important; 
+        color: #fff !important; 
+        width: 300px;
+        position: static; 
+        margin-right: 20px; 
+    }
+
+    .sidebar .section h2 {
+        color: #ffffff !important; 
+    }
+
+    .sidebar .section p,
+    .sidebar .section a {
+        color: #ddd !important; 
+    }
+
+    .content {
+        flex-grow: 1; 
+        margin-left: -10px !important; 
+    }
+}
+

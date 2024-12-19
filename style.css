@@ -1,7 +1,8 @@
 /* General Layout */
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
+    font-family: 'Roboto', sans-serif; 
+    font-size: 14px; 
     background-color: #f4f4f4;
     color: #333;
 }
@@ -9,29 +10,34 @@ body {
 .container {
     display: flex;
     min-height: 100vh;
-
 }
 
-/* Left Sidebar */
+h2 {
+    font-size: 18px; 
+    font-weight: 600; 
+    margin-bottom: 10px; 
+    line-height: 1.2;
+}
+
+/* Sidebar */
 .sidebar {
     width: 300px;
-    background-color: #434a54; 
+    background-color: #434a54;
     color: #fff;
     padding: 20px;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    position: relative;
 }
 
 .sidebar .profile-pic img {
     width: 150px;
     height: 150px;
-    border-radius: 50%; 
-    object-fit: cover; 
+    border-radius: 50%;
+    object-fit: cover;
     margin-bottom: 15px;
-    border: 3px solid #555; 
+    border: 3px solid #555;
 }
 
 .sidebar .section {
@@ -40,35 +46,34 @@ body {
 }
 
 .sidebar .section h2 {
-    font-size: 18px;
-    border-bottom: 2px solid #555; 
-    padding-bottom: 5px;
+    font-size: 18px; 
+    font-weight: 600; 
     margin-bottom: 10px;
     text-align: left;
+    border-bottom: 2px solid #555;
+    padding-bottom: 5px;
 }
 
 .sidebar .section p,
 .sidebar .section a {
-    font-size: 14px;
-    line-height: 1.5;
+    font-size: 14px; 
+    line-height: 1.5; 
     margin-bottom: 5px;
-    color: #ddd; 
-    text-align: left;
+    color: #ddd;
 }
 
 .sidebar .section a {
-    text-decoration: none; 
-    color: #00bcd4; 
+    text-decoration: none;
+    color: #00bcd4;
 }
 
 .sidebar .section a:hover {
-    color: #1e90ff; 
+    color: #1e90ff;
 }
-
 
 /* Main Content */
 .content {
-    flex-grow: 1; 
+    flex-grow: 1;
     background-color: #fff;
     padding: 20px;
     box-sizing: border-box;
@@ -76,23 +81,21 @@ body {
 }
 
 .content header h1 {
-    font-family: 'Roboto', sans-serif; 
-    font-size: 30px; 
+    font-size: 18px; 
     font-weight: 600; 
-    line-height: 1.2; 
-    margin-bottom: 15px; 
-    color: #333; 
+    line-height: 1.2;
+    margin-bottom: 15px;
 }
 
 .content header p {
-    font-size: 16px;
+    font-size: 14px; 
     line-height: 1.5;
     margin-bottom: 10px;
 }
 
 .content h2 {
-    font-size: 20px;
-    margin-top: 20px;
+    font-size: 18px; 
+    font-weight: 600; 
     margin-bottom: 10px;
     border-bottom: 2px solid #ddd;
     padding-bottom: 5px;
@@ -105,64 +108,58 @@ body {
 }
 
 .content ul li {
-    margin-bottom: 15px;
-    font-size: 14px;
+    font-size: 14px; 
     line-height: 1.5;
+    margin-bottom: 10px;
 }
 
-/* General Skills Section */
+/* Skills Section */
 .skills {
     margin-top: 20px;
 }
 
-.skills h2 {
-    margin-bottom: 20px;
-    font-size: 20px;
-    border-bottom: 2px solid #ddd;
-    padding-bottom: 5px;
-}
-
-/* Skills List */
-.skill {
+.skills .skill {
     display: flex;
     align-items: center;
     margin-bottom: 15px;
-    gap: 10px; 
 }
 
-.skill p {
-    flex: 1; 
-    font-size: 14px;
+.skills .skill p {
+    flex: 1;
+    font-size: 14px; 
     margin: 0;
     font-weight: bold;
 }
 
-/* Skill Bar */
-.skill-bar {
-    width: 2cm; 
-    height: 8px; 
-    background-color: #ddd; 
-    border-radius: 4px; 
+.skills .skill-bar {
+    width: 120px;
+    height: 8px;
+    background-color: #ddd;
+    border-radius: 4px;
     overflow: hidden;
     position: relative;
 }
 
-.skill-fill {
-    height: 100%; 
-    background-color: #434a54; 
-    transition: width 0.5s ease-in-out; 
+.skills .skill-fill {
+    height: 100%;
+    background-color: #434a54;
+    transition: width 0.5s ease-in-out;
 }
 
-
+/* Interests Section */
+.interests ul {
+    list-style-type: disc;
+    margin-left: 20px;
+}
 
 /* Responsive Design */
 @media (max-width: 768px) {
     .container {
-        flex-direction: column; 
+        flex-direction: column;
     }
 
     .sidebar {
-        width: 100%; 
+        width: 100%;
         align-items: flex-start;
         padding: 15px;
     }
@@ -175,35 +172,34 @@ body {
 /* Print Styles */
 @media print {
     body {
-        background-color: #fff; 
-        color: #000; 
+        background-color: #fff;
+        color: #000;
     }
 
     .container {
         display: flex;
-        flex-direction: row; 
+        flex-direction: row;
     }
 
     .sidebar {
-        background-color: #434a54 !important; 
-        color: #fff !important; 
+        background-color: #434a54 !important;
+        color: #fff !important;
         width: 300px;
-        position: static; 
-        margin-right: 20px; 
+        position: static;
+        margin-right: 20px;
     }
 
     .sidebar .section h2 {
-        color: #ffffff !important; 
+        color: #ffffff !important;
     }
 
     .sidebar .section p,
     .sidebar .section a {
-        color: #ddd !important; 
+        color: #ddd !important;
     }
 
     .content {
-        flex-grow: 1; 
-        margin-left: -10px !important; 
+        flex-grow: 1;
+        margin-left: -10px !important;
     }
 }
-
